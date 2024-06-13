@@ -33,8 +33,7 @@ body{
 
 .hours {
   background: #8bcef0;
- 
-}
+ }
 
 
 .numbers {
@@ -63,7 +62,16 @@ body{
  
 }
 
+.blue {
+  position: absolute;
+  background:  #8bcef0;
+  height: 80px;
+  width: 80px;
+  left: 60%;
+  top: 5%;
 
+
+}
 
 
     </style>
@@ -77,13 +85,15 @@ body{
       <div class="hours"> 
         <div  id="hours" class="numbers"> </div>hours</div> 
 
+      
+      </div>
 
 </div>
 
 </body>
 <script>
     const year = new Date().getFullYear();
-const myDate = new Date('Jun 02, 2025 00:00:00');
+const myDate = new Date('Jun 2, 2025 00:00:00');
 console.log(myDate);
 
 // countdown
@@ -98,11 +108,12 @@ let timer = setInterval(function() {
   // math
   let days = Math.floor(diff / (1000 * 60 * 60 * 24));
   let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-
-
+  let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+ 
   // display
   document.getElementById("days").innerHTML=days
   document.getElementById("hours").innerHTML=hours
+
 
 
 
